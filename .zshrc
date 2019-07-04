@@ -36,19 +36,18 @@ alias mci="mvn clean install"
 alias mct="mvn clean test"
 alias mcc="mvn clean compile"
 
-check_dependencies_vulnerabilities() { mvn org.owasp:dependency-check-maven:aggregate versions:display-dependency-updates -P dependency-check }
 
 restore_db_docker_container() {
 	docker stop mongodb
 	docker rm mongodb
-	docker run -ti --name mongodb -p 27017:27017 docker.repo.dreamit.de/lotto-dump
+	docker run -ti --name mongodb -p 27017:27017 docker.repo.xxxxp
 }
 restore_db_docker_image() {
 	docker stop mongodb
 	docker rm mongodb
-	docker rmi --force docker.repo.dreamit.de/lotto-dump
-	docker pull docker.repo.dreamit.de/lotto-dump
-	docker run -ti --name mongodb -p 27017:27017 docker.repo.dreamit.de/lotto-dump
+	docker rmi --force docker.repo.xxxxp
+	docker pull docker.repo.xxxxp
+	docker run -ti --name mongodb -p 27017:27017 docker.repo.xxxxp
 }
 clean_docker_volume() { docker volume rm $(docker volume ls -qf dangling=true) }
 
