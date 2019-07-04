@@ -1,9 +1,8 @@
 
-#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/Users/rur/work/apps/maven
-export M2=$M2_HOME/bin
 export MONGO_HOME=/Users/rur/work/apps/mongodb/bin
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.jenv/bin:$MONGO_HOME:M2:JAVA_HOME:$PATH
+export PATH=$JAVA_HOME:$MONGO_HOME:$M2_HOME/bin:$PATH
 
 
 export ZSH=/Users/rur/.oh-my-zsh
